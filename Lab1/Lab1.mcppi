@@ -6,7 +6,7 @@ Value=0
 [BUILD_TYPE]
 Value=0
 [ACTIVE_TAB]
-Value=Lab1.c
+Value=NewUnit_0.c
 [USE_EEPROM]
 Value=0
 [USE_HEAP]
@@ -16,8 +16,9 @@ Value=0
 [EEPROM_DEFINITION]
 Value=
 [FILES]
-Count=1
+Count=2
 File0=Lab1.c
+File1=lab1-2.c
 [BINARIES]
 Count=0
 [IMAGES]
@@ -25,7 +26,7 @@ Count=0
 ActiveImageIndex=-1
 [OPENED_FILES]
 Count=1
-File0=Lab1.c
+File0=lab1-2.c
 [EEPROM]
 Count=0
 [ACTIVE_COMMENTS_FILES]
