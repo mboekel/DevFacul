@@ -6,12 +6,15 @@ void main()
 
  while(1)
  {
- if (PORTB.RB0==0)
+ if (!PORTB.RB0)
  {
  PORTD.RD0 = 1;
- Delay_ms(100);
+ Delay_ms(1000);
+ }
+ else
+ {
  PORTD.RD0 = 0;
-
+ Delay_ms(1000);
  }
  }
 }
