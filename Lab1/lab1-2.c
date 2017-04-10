@@ -1,6 +1,5 @@
 //      TESTE COM LCD
 
-ADCON1 = 0x6;
 
 // LCD module connections
 sbit LCD_RS at RE0_bit;
@@ -22,7 +21,7 @@ char txt2[] = "EasyPIC6";
 char txt3[] = "Lcd4bit";
 char txt4[] = "example";
 
-char i;                              // Loop variable
+char i;              // Loop variable
 
 void Move_Delay()
   {                  // Function used for text moving
@@ -30,6 +29,7 @@ void Move_Delay()
   }
 
 void main(){
+   ADCON1 = 0x6;        // Configure AN pins as digital I/O
   //ANSEL  = 0;                        // Configure AN pins as digital I/O
   ANSELH = 0;
   C1ON_bit = 0;                      // Disable comparators
@@ -51,18 +51,20 @@ void main(){
   Delay_ms(2000);
 
   // Moving text
-  for(i=0; i<4; i++) {               // Move text to the right 4 times
+  for(i=0; i<4; i++)
+   {               // Move text to the right 4 times
     Lcd_Cmd(_LCD_SHIFT_RIGHT);
     Move_Delay();
   }
 
-  while(1) {                         // Endless loop
-    for(i=0; i<8; i++) {             // Move text to the left 7 times
+  while(1)
+   {                              // Endless loop
+    for(i=0; i<8; i++) {         // Move text to the left 7 times
       Lcd_Cmd(_LCD_SHIFT_LEFT);
       Move_Delay();
     }
 
-    for(i=0; i<8; i++) {             // Move text to the right 7 times
+    for(i=0; i<8; i++) {         // Move text to the right 7 times
       Lcd_Cmd(_LCD_SHIFT_RIGHT);
       Move_Delay();
     }
